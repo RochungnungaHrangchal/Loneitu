@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <domain-config cleartextTrafficPermitted="true">
+        <domain tools:ignore="NetworkSecurityConfig">
+            localhost
+        </domain>
+        <domain includeSubdomains="true">loneitu.nic.in
+
+        </domain>
+    </domain-config>
+</network-security-config>

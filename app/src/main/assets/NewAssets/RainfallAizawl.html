@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+    g[class^='raphael-group-'][class$='-creditgroup'] {
+         display:none !important;
+    }
+</style>
+
+<meta charset="utf-8"/>
+<!--<script type="text/javascript" src="fusioncharts.charts.js"></script>
+<script type="text/javascript" src="fusioncharts.js"></script> -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/css/bootstrap-select.min.css" />
+<script type="text/javascript" src="js/fusioncharts.js"></script>
+<script type="text/javascript" src="js/fusioncharts.charts.js"></script>
+    <!-- Step 2 - Include the fusion theme -->
+   <!-- <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>-->
+ <script type="text/javascript" src="js/themes/fusioncharts.theme.fusion.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/js/bootstrap-select.min.js"></script>
+<title>
+</title>
+</head>
+
+<body>
+
+<div class="container-fluid" style="width: 95%;">
+<div class="row">
+  <div class="col-xs-12">
+<div class="form">
+ <div class="col-xs-6">
+   <div class="form-group-sm">
+         <select id="yearnumber" onchange="getcrops()" class="form-control" >
+          <option value="choose">Select The Year</option>
+          <option value="sa">2017</option>
+          <option value="sa">2016</option>
+		  <option value="sa">2015</option>
+		  <option value="sa">2014</option>
+		  <option value="sa">2013</option>
+		  <option value="sa">2012</option>
+		  <option value="sa">2011</option>
+		  <option value="sa">2010</option>
+
+       </select>
+    </div>
+</div>
+
+
+<div id="chart-container" class="form-group-sm justify-content-left text-left">
+      <svg width="90px" class="justify-content-center img-fluid img-responsive center-block" height="90px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-rolling" style="background: none;"><circle cx="50" cy="50" fill="none" ng-attr-stroke="{{config.color}}" ng-attr-stroke-width="{{config.width}}" ng-attr-r="{{config.radius}}" ng-attr-stroke-dasharray="{{config.dasharray}}" stroke="#6ac1a5" stroke-width="9" r="33" stroke-dasharray="155.50883635269477 53.83627878423159" transform="rotate(324 50 50)"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform></circle></svg></div>
+  </div>
+
+
+</div>
+<div  class="col-sm-12"  >
+
+<script>
+</script>
+
+<script>
+  
+  var firebaseConfig = {
+    apiKey: "AIzaSyAJ9GBuNyl2MPaILNH-wapdvZRy8GzOLCw",
+    authDomain: "loneituthian-6a9a7.firebaseapp.com",
+    databaseURL: "https://loneituthian-6a9a7.firebaseio.com",
+    projectId: "loneituthian-6a9a7",
+    storageBucket: "loneituthian-6a9a7.appspot.com",
+    messagingSenderId: "800411350693",
+    appId: "1:800411350693:web:3d094efb13d57df0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  const db = firebase.firestore();
+  
+
+function getcrops(){
+var tt=document.getElementById("yearnumber");
+//var ct=document.getElementById("district");
+//console.log("Crop Type Value : " + ct.options[ct.selectedIndex].value);
+//document.getElementById("year").innerHTML=tt.options[tt.selectedIndex].text;
+//console.log("My HTML text1:" + document.getElementById("year").innerHTML);
+
+// document.getElementById("myParagraph").innerHTML;
+ 
+ 
+         var Month=[],Average=[],Aizawl=[],Darlawn=[],Khawruhlian=[],Sairang=[],Neihbawi=[],Sialsuk=[];
+		 //var Average=[];
+		 //var Aizawl=[];
+		 var i=0;
+	     db.collection("Rainfall").doc(tt.options[tt.selectedIndex].text).collection("Aizawl")
+		.get()
+		.then(function(doc){
+		if(doc==null)
+		{
+		console.log(" Area and Production details not Found !");
+		}
+		else
+		{
+        doc.forEach(function(dimp){
+		var intem=dimp.data();
+			//MyArray= new Array(intem.A);
+			//MyArray.push(intem.Area);
+			Month.push(intem.Month);
+			Aizawl.push(intem.Aizawl);
+			Darlawn.push(intem.Darlawn);
+			Sairang.push(intem.Sairang);
+			Sialsuk.push(intem.Sialsuk);
+			Neihbawi.push(intem.Neihbawi);
+			Average.push(intem.Average);
+			Khawruhlian.push(intem.Khawruhlian);
+							
+		});
+		}
+		
+		
+ 
+  FusionCharts.ready(function(){
+    for(i=0;i<Month.length;i++)
+		{
+		//console.log("My New Array:" + MyArray[i]);
+		//console.log("My New Array:" + MyDistrict[i]);
+		//console.log("My New Array:" + MyProduction[i]);
+  
+   var chartObj = new FusionCharts({
+             
+    
+    type: 'mscombidy2d',
+    renderAt: 'chart-container',
+    width: '100%',
+    height: '500',
+    dataFormat: 'json',
+	
+    dataSource: 
+	
+	
+	{
+        "chart": {
+		    
+            "caption": "Rainfall Data",
+			"useRoundEdges":"0",
+			"palettecolors":"#5d62b5,#29c3be,#f2726f",
+			"showAlternateHGridColor": "0",
+			"labelDisplay": "rotate",
+			"showYAxisValues":"0",
+			"slantLabel": "1",
+            "subCaption": tt.options[tt.selectedIndex].text + " Aizawl District",
+            "xAxisname": "",
+            "pYAxisName": "",
+			"numberPrefix": "",
+			"pNumberSuffix": "",
+            "sYAxisName": "Rainfall( in mm)",
+            "numberPrefix": "",
+            "sNumberSuffix": "",
+            "sYAxisMaxValue": "",
+			"pYAxisMaxValue": "",
+
+            //Cosmetics
+            "divlineAlpha": "100",
+            "divlineColor": "#88888",
+            "divlineThickness": "1",
+            "divLineIsDashed": "10",
+            "divLineDashLen": "1",
+            "divLineGapLen": "1",
+            "usePlotGradientColor": "0",
+            "anchorRadius": "3",
+            "theme": "fusion"
+        },
+		
+		
+		
+		"categories": [{
+            "category": [
+			    {
+		           "label": Month[0]
+				},
+				{
+		           "label": Month[1]
+                },
+				
+				{
+		           "label": Month[5]
+                },
+				
+				{
+		           "label": Month[6]
+                }
+				,
+				{
+		           "label": Month[7]
+                }
+				,
+				{
+		           "label": Month[8]
+                }
+				,
+				{
+		           "label": Month[9]
+                }
+				,
+				{
+		           "label": Month[10]
+                }
+				,
+				{
+		           "label": Month[11]
+                }
+				,
+				{
+		           "label": Month[12]
+                }
+				,
+				{
+		           "label": Month[2]
+                }
+				,
+				{
+		           "label": Month[3]
+                }
+				,
+				{
+		           "label": Month[4]
+                }
+                
+            ]
+        }],
+		"dataset": [{
+                "seriesName": "Aizawl",
+				"renderAs": "spline",
+				"parentYAxis": "P",
+				"color":"#db5a6b",
+				"showValues": "0",
+                "data": [{"value":Aizawl[0]},{"value":Aizawl[1]},{"value":Aizawl[5]},{"value":Aizawl[6]},{"value":Aizawl[7]},{"value":Aizawl[8]},{"value":Aizawl[9]},{"value":Aizawl[10]},{"value":Aizawl[11]},{"value":Aizawl[12]},{"value":Aizawl[2]},{"value":Aizawl[3]},{"value":Aizawl[4]},]
+            },
+			
+			/*{
+                "seriesName": "Area II",
+				"renderAs": "bar3d",
+				"parentYAxis": "P",
+				"showValues": "0",
+                "data": [{"value":MyProduction[0]},{"value":MyProduction[1]},{"value":MyProduction[2]},{"value":MyProduction[3]},{"value":MyProduction[4]},{"value":MyProduction[5]},{"value":MyProduction[6]},{"value":MyProduction[7]},{"value":MyProduction[8]},]
+            },*/
+			{
+                "seriesName": "Darlawn",
+                "parentYAxis": "S",
+                "renderAs": "bar2d",
+                "showValues": "0",
+                "data": [{"value":Darlawn[0]},{"value":Darlawn[1]},{"value":Darlawn[5]},{"value":Darlawn[6]},{"value":Darlawn[7]},{"value":Darlawn[8]},{"value":Darlawn[9]},{"value":Darlawn[10]},{"value":Darlawn[11]},{"value":Darlawn[12]},{"value":Darlawn[2]},{"value":Darlawn[3]},{"value":Darlawn[4]},]
+            },
+			{
+                "seriesName": "Sairang",
+                "parentYAxis": "S",
+                "renderAs": "spline",
+				"color":"#3aa8c1",
+                "showValues": "0",
+                "data": [{"value":Sairang[0]},{"value":Sairang[1]},{"value":Sairang[5]},{"value":Sairang[6]},{"value":Sairang[7]},{"value":Sairang[8]},{"value":Sairang[9]},{"value":Sairang[10]},{"value":Sairang[11]},{"value":Sairang[12]},{"value":Sairang[2]},{"value":Sairang[3]},{"value":Sairang[4]},]
+            },
+			{
+                "seriesName": "Average",
+                "parentYAxis": "S",
+                "renderAs": "bar2d",
+                "showValues": "0",
+                "data": [{"value":Average[0]},{"value":Average[1]},{"value":Average[5]},{"value":Average[6]},{"value":Average[7]},{"value":Average[8]},{"value":Average[9]},{"value":Average[10]},{"value":Average[11]},{"value":Average[12]},{"value":Average[2]},{"value":Average[3]},{"value":Average[4]},]
+            },
+			{
+                "seriesName": "Sialsuk",
+                "parentYAxis": "S",
+                "renderAs": "spline",
+                "showValues": "0",
+                "data": [{"value":Sialsuk[0]},{"value":Sialsuk[1]},{"value":Sialsuk[5]},{"value":Sialsuk[6]},{"value":Sialsuk[7]},{"value":Sialsuk[8]},{"value":Sialsuk[9]},{"value":Sialsuk[10]},{"value":Sialsuk[11]},{"value":Sialsuk[12]},{"value":Sialsuk[2]},{"value":Sialsuk[3]},{"value":Sialsuk[4]},]
+            },
+			{
+                "seriesName": "Neihbawi",
+                "parentYAxis": "S",
+                "renderAs": "spline",
+				"color":"#b0bf1a",
+                "showValues": "0",
+                "data": [{"value":Neihbawi[0]},{"value":Neihbawi[1]},{"value":Neihbawi[5]},{"value":Neihbawi[6]},{"value":Neihbawi[7]},{"value":Neihbawi[8]},{"value":Neihbawi[9]},{"value":Neihbawi[10]},{"value":Neihbawi[11]},{"value":Neihbawi[12]},{"value":Neihbawi[2]},{"value":Neihbawi[3]},{"value":Neihbawi[4]},]
+            },
+			{
+                "seriesName": "Khawruhlian",
+                "parentYAxis": "S",
+                "renderAs": "bar2d",
+				"color":"#f498ad",
+                "showValues": "0",
+                "data": [{"value":Khawruhlian[0]},{"value":Khawruhlian[1]},{"value":Khawruhlian[5]},{"value":Khawruhlian[6]},{"value":Khawruhlian[7]},{"value":Khawruhlian[8]},{"value":Khawruhlian[9]},{"value":Khawruhlian[10]},{"value":Khawruhlian[11]},{"value":Khawruhlian[12]},{"value":Khawruhlian[2]},{"value":Khawruhlian[3]},{"value":Khawruhlian[4]},]
+            },
+			
+        ]
+		
+		}
+		  
+   
+   });
+   
+   chartObj.render();
+   
+   }
+   
+   
+});
+ 
+// End of Fusion charts Ready
+   
+
+  });  
+}  
+		
+
+   
+   </script>
+   
+   
+</body>
+</html>

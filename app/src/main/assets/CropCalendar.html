@@ -1,0 +1,345 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.slim.min.js" ></script>   
+    <script src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+     
+       body{
+  padding:10px;
+  background:#fff;
+}
+.wrapper{
+  width:70%;
+}
+@media(max-width:992px){
+ .wrapper{
+  width:100%;
+} 
+}
+.panel-heading {
+  padding: 0;
+	border:0;
+}
+.panel-title>a, .panel-title>a:active{
+	display:block;
+	padding:5px;
+  color:#555;
+  
+	text-decoration:none;
+}
+.panel-heading  a:before {
+   font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+}
+.panel-heading.active a:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+} 
+    </style>
+    <script>
+	  $(document).ready(function(){
+       $('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+});
+
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+  });
+    </script>
+    <title>Dealers under Agriculture Department</title>
+  </head>
+  <body>
+
+      <div class="container-fluid" style="width:95%;">
+             
+                <div class="form-group-xs">
+                        <label for="thlai">Thla / Month</label>
+            
+                        <select id="thlai" class="form-control">
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>                      
+                              </select></div>
+                   
+                      <br/><br/>
+
+                      <div class="form-group-xs">
+                            <div class="panel-group" id="accordion">
+                                 <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-menu-right"></span> Thlai Chin, tuh leh phun sawn turte </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                    <ul id="january"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+									
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-menu-right"></span> Thlai venhim hna</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                    <ul id="thlaivenhim"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+									
+                                    <div class="panel panel-warning">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-menu-right"></span>Ser Enkawl hna </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                    <ul id="serenkawlna"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-menu-right"></span> Ser ven him hna </a>
+													</h4>
+                                            </div>
+                                            <div id="collapseFour" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                        <ul id="servenhimna"></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+										 <div class="panel panel-primary">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-menu-right"></span> Thlai dang chin theihte
+                                                            </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseFive" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                            <ul id="thlaidangchintheihte"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <div class="panel panel-danger">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><span class="glyphicon glyphicon-menu-right"></span> Sangha Khawi
+                                                            </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseSix" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                            <ul id="sanghakhawi"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </div></div>
+      
+      </div>
+  
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ 
+      <script>
+          $(document).ready(function(){
+                 $("#january").append("<p style='text-align:justify;'> <b>THLASIK BUH: </b> Leilet a chin tur thlasik Buh, December thla lama kûi tawh chu phun sawn a hun tawh ang. SRI method hmang anih chuan a tiak ni10-12-ah an phun sawn tlangpui. Buh variety chin tlangpui te chu- Gomati, CAU R-1leh local variety hrang hrang te.     </p>");
+                    $("#january").append("<p style='text-align:justify;'>  <b>TEL ANTAM: </b>Thlasik buh chin lohna leilet leh lui kam nul a tel antam chin te a par hun lai a ni a. Rah chhuah tha turin rannung leh natna lak a ven hun lai tak a ni. A hnah, kuang leh a parah te bawmtu hrik (aphids), hnahval natna (cercospoa leafspot leh rust) leh a dangte lak a venhimna pek that hun lai tak a ni. Rannung bawmtu te hi an tam chuan Dichlorvos 76 % EC (Nuvan) emaw Malathion 50% EC emaw Chlorpyriphos 50% EC @ 2ml/ lt tui pawlh a kah tur. Val natna ah chuan Indofil M-45 emaw Metalaxyl 8%+ Mancozeb 64% emaw Copper oxychloride @ 2gm/ltr tui pawlh a kah tur.  </p>");
+                    $("#january").append("<p style='text-align:justify;'>  <b>FIELD PEA (CHANA):</b> October- November thla a chin Chana te chu a par lai leh a rah lawh hun a ni. Boruak vawt leh chhum a tamin vut buak natna (powdery mildew) leh damping-off in a bei duh thin, heng natna hi a tam anih chuan Wettable Sulphur @3gm/lt tui emae Karathane @1ml/ltr tui a kah tur. Rannung te tak te (Aphids leh leaf miner) te pawhin an bawm duh deuh, an tam viau chuan Neem oil @ 5ml/ lt tui emaw Diclorvos @ 0.5ml/ lt tui pawlh a kah tur. A rah lawh tlai hi chuan chemical pesticides te hi kah tam loh a duhthusam a ni.</p>");
+					$("#january").append("<p style='text-align:justify;'>  <b> ZIKHLUM, BROCOLLI, PARBAWR: </b>A rah leh par lawh hun lai a ni a. a bawmtu rannung te kah nan hian neem oil @5ml/ lt tui pawlh a kah tur. Natna awmthei te chu: Alternaria leaf spot, Downey mildew, Black Rot leh a dangte, an enkawl dan tur hi chu Agriculture lam a mithiamte rawn a pawimawh.  </p>");
+                   
+                    $("#serenkawlna").append("<p style='text-align:justify;'>Hemi thla chhung hian ser huan lo duan lawk vek a ṭha. Tin, hemi thlaah hian ser kui ṭiahna hmunte thlawh fai tur a ni. Hei bakah hian thei hnah tlakawlh ṭhinte hlawi a hun ṭan bawk a. December thla chhunga BAWNGEK LEIṬHA leh leiṭha dang awm thei ang pek a ṭha. </p>");
+					$("#servenhimna").append("<p style='text-align:justify;'><b>1.SER KUNG NGET(Borer): </b>Ser kung nget pangang hian a kung lairil ah verhin kua a siam a. January thla ah kung nget pangangin kua a siam ah hian Dichlovos 76 % EC (Nuvan) @ 2-5ml/litre tui pawlhin lapua chiah huha a kuaah hnawh emaw khawnvartui syringe a kah luha hlum a charh phui leh tur.   </p>");
+					$("#servenhimna").append("<p><b>2.GUMMOSIS leh CANKER : </b>Fur ruahtui tlak hma Januay thla hian Gummosis laka ven nan ser kung kha leiseh chin atanga 1 meter chinah Bordeaux paste (1 %) emaw copper oxychloride diak hnawih/ tah kual tur. Ser kung to na bul lei kha Ridomil MZ 72 @ 2.75 gm/ 1 liter tui pawlh hisap in kah emaw chiah huh a tha.<br>  &emsp;&emsp;     Canker in a beih hi chu a hnahah leh a rahah te val a awm thin. A hnah a khawr phah a, a rah a sawr bawl phahin a rah kha a hul in, tui a pai tlem thin. Bodeaux mixture emaw copper oxychloride @ 3 gm/lt tui pawlh a kah a tha. <br>&emsp;&emsp; A tlangpuiin Ser huan kha vawnfai tur a ni a, rannung leh natna in a beih ser hnah, tang leh a kung paih fai tur. </p>" );
+                    $("#sanghakhawi").append("<p >A hnuaia mi ang hian Dil hectare khatah BAWNG EK LEIṬHA LEH FERTILIZERS pek tur a ni. </p>");    
+						$("#sanghakhawi").append("<ol type='1'><li style='text-align:justify'>Bawngek Kg - 80 </li><li>UREA Kg - 8 </li><li>S.S.P  Kg - 20 </li><li>M.O.P Kg - 4</li><p >&emsp;EMAW / OR <p></ol><ol type='1'><li>UREA Kg - 5.25 </li><li>D.A.P  Kg - 7.00 </li><li>M.O.P Kg - 4.00</li></ol>");
+					$("#sanghakhawi").append("<p><b>A ṭul chuan ARTIFICIAL FEEDING a hnuaia mi ang hian pek tur a ni:- </b></p>");
+					$("#sanghakhawi").append("<ol type='1'><li>MUSTARD OIL CAKE- 4.5 kg. nitin pek tur a ni.</li><li>RICE BRAN- 4.5kg nitin pek tur a ni. </li><li>Hnah hring chan sawm Grass Crap ei turin pek ni se.</li></ol>");
+                    
+               $("#thlai").change(function(){
+                var status = this.value;  
+                $("ul").empty();
+                $("#chhiartur").empty();
+                if(status=="January")
+                { 
+                    $("#january").append("<p style='text-align:justify;'> <b>THLASIK BUH: </b> Leilet a chin tur thlasik Buh, December thla lama kûi tawh chu phun sawn a hun tawh ang. SRI method hmang anih chuan a tiak ni10-12-ah an phun sawn tlangpui. Buh variety chin tlangpui te chu- Gomati, CAU R-1leh local variety hrang hrang te.     </p>");
+                    $("#january").append("<p style='text-align:justify;'>  <b>TEL ANTAM: </b>Thlasik buh chin lohna leilet leh lui kam nul a tel antam chin te a par hun lai a ni a. Rah chhuah tha turin rannung leh natna lak a ven hun lai tak a ni. A hnah, kuang leh a parah te bawmtu hrik (aphids), hnahval natna (cercospoa leafspot leh rust) leh a dangte lak a venhimna pek that hun lai tak a ni. Rannung bawmtu te hi an tam chuan Dichlorvos 76 % EC (Nuvan) emaw Malathion 50% EC emaw Chlorpyriphos 50% EC @ 2ml/ lt tui pawlh a kah tur. Val natna ah chuan Indofil M-45 emaw Metalaxyl 8%+ Mancozeb 64% emaw Copper oxychloride @ 2gm/ltr tui pawlh a kah tur.  </p>");
+                    $("#january").append("<p style='text-align:justify;'>  <b>FIELD PEA (CHANA):</b> October- November thla a chin Chana te chu a par lai leh a rah lawh hun a ni. Boruak vawt leh chhum a tamin vut buak natna (powdery mildew) leh damping-off in a bei duh thin, heng natna hi a tam anih chuan Wettable Sulphur @3gm/lt tui emae Karathane @1ml/ltr tui a kah tur. Rannung te tak te (Aphids leh leaf miner) te pawhin an bawm duh deuh, an tam viau chuan Neem oil @ 5ml/ lt tui emaw Diclorvos @ 0.5ml/ lt tui pawlh a kah tur. A rah lawh tlai hi chuan chemical pesticides te hi kah tam loh a duhthusam a ni.</p>");
+					$("#january").append("<p style='text-align:justify;'>  <b> ZIKHLUM, BROCOLLI, PARBAWR: </b>A rah leh par lawh hun lai a ni a. a bawmtu rannung te kah nan hian neem oil @5ml/ lt tui pawlh a kah tur. Natna awmthei te chu: Alternaria leaf spot, Downey mildew, Black Rot leh a dangte, an enkawl dan tur hi chu Agriculture lam a mithiamte rawn a pawimawh.  </p>");
+                   
+                    $("#serenkawlna").append("<p style='text-align:justify;'>Hemi thla chhung hian ser huan lo duan lawk vek a ṭha. Tin, hemi thlaah hian ser kui ṭiahna hmunte thlawh fai tur a ni. Hei bakah hian thei hnah tlakawlh ṭhinte hlawi a hun ṭan bawk a. December thla chhunga BAWNGEK LEIṬHA leh leiṭha dang awm thei ang pek a ṭha. </p>");
+					$("#servenhimna").append("<p style='text-align:justify;'><b>1.SER KUNG NGET(Borer): </b>Ser kung nget pangang hian a kung lairil ah verhin kua a siam a. January thla ah kung nget pangangin kua a siam ah hian Dichlovos 76 % EC (Nuvan) @ 2-5ml/litre tui pawlhin lapua chiah huha a kuaah hnawh emaw khawnvartui syringe a kah luha hlum a charh phui leh tur.   </p>");
+					$("#servenhimna").append("<p><b>2.GUMMOSIS leh CANKER : </b>Fur ruahtui tlak hma Januay thla hian Gummosis laka ven nan ser kung kha leiseh chin atanga 1 meter chinah Bordeaux paste (1 %) emaw copper oxychloride diak hnawih/ tah kual tur. Ser kung to na bul lei kha Ridomil MZ 72 @ 2.75 gm/ 1 liter tui pawlh hisap in kah emaw chiah huh a tha.<br>  &emsp;&emsp;     Canker in a beih hi chu a hnahah leh a rahah te val a awm thin. A hnah a khawr phah a, a rah a sawr bawl phahin a rah kha a hul in, tui a pai tlem thin. Bodeaux mixture emaw copper oxychloride @ 3 gm/lt tui pawlh a kah a tha. <br>&emsp;&emsp; A tlangpuiin Ser huan kha vawnfai tur a ni a, rannung leh natna in a beih ser hnah, tang leh a kung paih fai tur. </p>" );
+                    $("#sanghakhawi").append("<p >A hnuaia mi ang hian Dil hectare khatah BAWNG EK LEIṬHA LEH FERTILIZERS pek tur a ni. </p>");    
+					$("#sanghakhawi").append("<ol type='1'><li style='text-align:justify'>Bawngek Kg - 80 </li><li>UREA Kg - 8 </li><li>S.S.P  Kg - 20 </li><li>M.O.P Kg - 4</li><p >&emsp;EMAW / OR <p></ol><ol type='1'><li>UREA Kg - 5.25 </li><li>D.A.P  Kg - 7.00 </li><li>M.O.P Kg - 4.00</li></ol>");
+					$("#sanghakhawi").append("<p><b>A ṭul chuan ARTIFICIAL FEEDING a hnuaia mi ang hian pek tur a ni:- </b></p>");
+					$("#sanghakhawi").append("<ol type='1'><li>MUSTARD OIL CAKE- 4.5 kg. nitin pek tur a ni.</li><li>RICE BRAN- 4.5kg nitin pek tur a ni. </li><li>Hnah hring chan sawm Grass Crap ei turin pek ni se.</li></ol>");
+                   
+                }
+				else if(status=="February")
+				{
+					$("#january").append("<p style='text-align:justify;'> <b>ALU : </b>Alu ching tur hian tin 2 leh a chanve hmun a zauah 1.5-2.0 tonne vel mamawh a ni a. A tlara (line planting) lin a ṭha ber a, a tlar inhlat zawng hi 50-60 cm a ni tur a ni a, tlarah hian 15-20 cm a inhlatin leh 5-7 cm a thuk a lin tur a ni. Nipui Alu ching tur chuan February ni 15 hma ngei a chin tur a ni. Leichi (fertilizer) tlangram hectare khata mamawh zat tlangpui chu- 100-150 kg N (Urea), 100-150 kg P<sub>2</sub>O<sub>5</sub> (DAP) leh 50-100 kg K<sub>2</sub>O (MOP), hetiang zat hian tum hnih pek tur. Phun tirhah Nitrogen hi hmun thuma thena hmun hnih hman tur, MOP leh DAP hi a zavaia hman tur.<br>&emsp;&emsp;	Alu chi lin tur kha natna hrik emaw a tawih tur vennan Bavintin emaw Diathane Z-78 @ 2g/ litre tui pawlh hisapin a chi tur kha minute 5-10 chiah phawt tur.  </p>");
+                    $("#january").append("<p style='text-align:justify;'>  <b>AIENG LEH SAWHTHING::</b>  A kum hmasa April- May thla lam a Aieng leh sawhthing kan lin kha February thla hian chawh a lo hun tawh a. A hnah a rawn enga a lo ro khan aieng emaw sawhthing kha seng a hun tih a lantir thin. Fimkhur tak a a zung-in hliam tuar lo thei ang ber a chawh tur a ni. </p>");
+                    $("#january").append("<p style='text-align:justify;'>  <b>FRENCH BEAN:  </b>Tlangram ruahtui tla ringloa tuipek theihnaah chuan February thla hian a chin theih a, hectare khata ram zauah bean chi kg 80 vel mamawh a ni, phunna bi inhlat zawng hi 30x15 cm ni se bi khatah hian pahnih zel tuh tur. Leichi (fertilizer) pek zat tur hi kan leiin a mamawh dan azira pek tu a ni a, pek tu zat an chawh tlangpui chu- N (90-120 kg): P (60-80 kg): K (50 kg). A chi tuh hmain Nitrogen (Urea) dose chanve leh P (DAP) leh K (MOP) te hi azavaia pek tur, Nitrogen dose chanve bang hi a par tan tirha pek leh tur.<br>&emsp;&emsp;Phun hmain a chi hi pesticide a sawngbawl duhthusam a ni, a chi sawngbawl nan hian a chi kg khat hisapah <i>Trichoderma viride </i>@ 4gm emaw Carbendazim @ 2 gm hman tur.    <br>&emsp;&emsp;Ser hmun siam tumte tan ram vah fai sa-ah phunna tur khur laih ṭan a hun ta, tin, thei chi hrang hrang phun dan tur kar inhlat dan leh hectare khat hmuna phun theih zat bithliah chu hetiang hi a ni:-     <br><table><tr><th>Sl No.</th><th>Thlai Hming</th><th>A inhlat zawng</th><th>&emsp;Hectare 1-a phun theih zat</th></tr><tr><td>1</td><td>Thingfanghmȃ	</td><td><center>Metre 2-3</center></td><td>	<center>2500-1111</center></td></tr><tr><td>2</td><td>Serthlum	</td><td><center>Metre 5</center></td><td>	<center>400 vel</center></td></tr><tr><td>3</td><td>Theifeihmung	</td><td><center>Metre 8-10</center></td><td>	<center>  123-100</center></td></tr><tr><td>4</td><td>Coconut	</td><td><center>Metre 8</center></td><td>	<center>  123</center></td></tr><tr><td>5</td><td>Assam Lemon (Limbu)</td><td><center>Metre 3</center></td><td>	<center>  1111</center></td></tr><tr><td>6</td><td>Kuhva</td><td><center>Metre 2.75</center></td><td>	<center>  1296</center></td></tr><tr><td>7</td><td>Kȃwlthei	</td><td><center>Metre 5-7</center></td><td>	<center>  400-200</center></td></tr><tr><td>8</td><td>Perthei	</td><td><center>Metre 7-8</center></td><td>	<center>  204-123</center></td></tr><tr><td>9</td><td>Japan Theitê	</td><td><center>Metre 6</center></td><td>	<center>  277</center></td></tr><tr><td>10</td><td>Balhla	</td><td><center>Metre 2.4</center></td><td>	<center>  1735</center></td></tr></table></p>");			
+					$("#servenhimna").append("<p  style='text-align:justify;'> Ser Chawrno bawmtu rannung a awm a, January thlaa kah tur kha i la tih hman loh chuan, a tar lan tawh ang khan ser parhma ngeia kah tur a ni. ROGOR emaw NUVACRON hman mai ni se.  </p>" );
+					$("#sanghakhawi").append("<p  style='text-align:justify;'>Bawngek leiṭha leh Fertilizers te January thlaa mi ang khan pek leh tur a ni. Tin, ARTIFICIAL FEEDING pawh a ṭul chuan January thla ang khan pek leh ni se.Hnim hring chan sawm Grass Carp pek leh tur a ni. </p>");
+				}
+				else if(status=="March")
+				{
+				
+						$("#january").append("<p  style='text-align:justify;'><b>BALHLA: </b>A bul chawr zum pêt pawt 45cm vel hi a chi atan chuan a ṭha ber. Cavendish Variety chu metre 2.4 danah a tlarin phun tur a ni.</li>");
+						$("#january").append("<p  style='text-align:justify;'><b>AIENG LEH SAWHTHING:</b> A kum hma lam June thla a Aieng leh sawhthing kan lin kha March thlaah chawh a hun tawk chauh ang, a hnah a rawn enga a lo ro khan aieng emaw sawhthing kha seng a hun tih a lantir thin. </li>");
+						$("#january").append("<p  style='text-align:justify;'><b>FU:</b> Fu chi atan hian a ler lam apiang a ṭha. Chang thum nei zelin a chi atan tan tur. A chi tur chuan natna a vei tur a ni lo. Ram Hectare khatah a chi 35,000 a phun theih. Tin, hei bakah hian thlai dang Bal, Mai, Thingfanghma, Bawkbawn, Hmazil, leh Dawnfawh te pawh a chin tel theih a ni.<br>&emsp;&emsp;          Fu hi phun hmain tui litre 100 ah cabendazim 50 gm, malathion 200 ml leh urea kg 1 chawhpawlhin minute 15 chiah tur.</li>");
+						  $("#thlaivenhim").append("<p  style='text-align:justify;'> Sazu awmna hmunah chuan ṭhal lai tui van lai hian suat tur a ni.  Sazu tûr chah dan :- </p>");
+						   $("#thlaivenhim").append("<p><b>BROMODIOLONE:</b> Sazu tûr chhuak thar Bromodioline (Roban) hi chi hnih a awm a, (i) a chhang chi leh (ii) a dip (powder)  </p>");
+						    $("#thlaivenhim").append("<p  style='text-align:justify;'><b> A CAKE CHI HMAN DAN: </b>Sazu kuaah emaw, a kawngṭum leh a chhehvela a chet tlat ṭhinna-ah dah mai tur a ni. Metre 10 bialah cake tlang khat dah a tawk ang. A hraina hmun/ hmanrua siam i duh chuan, mau-in chhemthei lian hel hawl siam la, a chhungah sazu tûr (cake) chu hnawh lut la, sazu chettlatna hmunah leh thlawhlaiah te pawh dah mai tur.</p>");
+							$("#thlaivenhim").append("<p  style='text-align:justify;'><b>A DIP (POWDER) HMAN DAN: </b>A dip chi hi a fir (concentrate) anih avangin a chaw chah tur nena chawhpawlh zet hnuah hman chauh tur a ni. Hetiangin <br>1. A chaw chah tur buhfai emaw atta emaw- 240 gm. <br>2.	Oil-Badam tel emaw coconut tel – 25ml. <br>3.	Tûr dip (Bromodiolone) 0.25 % gms. A vain 250 gm.<br><br> Tel leh buhfai/atta chu ngun taka chawhpawlh sazu tur dip chawhpawlh ang che. Tichuan, lehkhain gms.15 tê tê-in fun hran thliah thliah tur a ni. Fun khat hi sazu kawkhatah dah zel tur a ni. Leilet hmunah chuan buh phunsawn aṭanga ni 20-aṭanga tulzum hun inkarah sazu te hi hrai ṭhin tur a ni. </li>");
+						  $("#serenkawlna").append("<p  style='text-align:justify;'>Ser phun reng reng hian a sên laia enkawl ngun hian a rah hun thleng hian nghawng a nei thei a. Chuvangin, ser phun tharte chu thliin a chhem nghin loh nan mau, ser bul aṭanga feet chanve (1/2) velah phun a, a hmawr lehlam lehlamah ram hruiin mar tawkin thlun zawm tur a ni.<br>&emsp;&emsp;                                         Nipui hian ser rah insiam nasa takin a tibuai, ni sa lutuk avangin a kawr a khik phah thei, ser la tê deuhah a hnah a kung ti hlim thei a neih loh avangin a tuar nasa bik em em a. Nisa lutuk laka vennan hian buhpawl emaw chinai thi tawh emaw hnawih a ṭangkai hle a ni.  </li>");
+						  $("#servenhimna").append("<p  style='text-align:justify;'>January leh Febuary thla, ser parchhuah hmain ser ven him hna lam chi hi chu tih zawh tawh tur a ni. Dan naranin February thlaa kah hian a par lai leh a rah inṭantir hian rannung lakah a venghim hneh hle a. Chuvangin, a vawihnihna chu ser sên hnu April thla lamah kah leh chauh tur a ni. February thla lama ti lo an lo awm palh a nih chuan khang rannungte kha an tam viau chuan thla tawp lamah ser sên insiam hnuah kah chauh tur a ni.  </li>");
+						   $("#thlaidangchintheihte").append("<p  style='text-align:justify;'>Behliang leh Dailuah te ser huanah a tidaihlimtu atan leh a ti ṭha tur atan chin theih a ni.Tin, Litchi kawlawm duhte tan a hun ṭan bawk. </li>");
+						   $("#sanghakhawi").append("<p  style='text-align:justify;'> 1.	Thla tin tih dan khan Bawngek Leiṭha leh Fertilizer pek tur. <br>2.	Artificial Feeding pawh a ṭul chuan pek tur.<br> 3.	Hnim chan sawm Grass Carp pek a ngai bawk.</p>");
+				}
+								else if(status=="April")
+					
+				{
+					$("#january").append("<p  style='text-align:justify;'>Fu, Balhla, Fur Behlawi leh thlai dangte thla hmasa a chin leh lin tur te kha la tih zawh loh chuan tih zui tur a ni. Buh leh thlai chin ṭan ngei ngei tur. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>VAIMIM: </b>Vaimim kan chin tlangpuite- HQPM, Vijay Composite, PC-3, PC-4, local variety hrang hrang te. Hectare khat hmunah vaimim chi kg 10-11 a tawk a, a phun inkar hlat zawng hi a bi ah 45-50cm, a tlarah (Line) 10 cm a ni tur a ni. Natna hrik lak a vennan fungicides in a chi sawngbawl a pawimawh, thiram emaw carbendazim hi a chi kg 1 zel ah gm 2 hman tur a ni. Vaimim hian chaw a mamawh tam bik avangin chuktuah huan kum tina thlai chinnaah chuan metre 10 bialah UREA kg. 2, <b>BONEMEAL</b> kg. 4 leh M.O.P kg. 1 pek a ṭha. Vaimim hi April thla chawhma ngei a tuh tur a ni. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>AIENG: </b>Aieng hi April thla fur ruahtui tlak tanah chin a tha, hectare khat atan a chi 2500 kg vel a tawk a, lei thlur pawng a inkar hlat zawng 45-50 cm leh a bi inhlat zawng 20-25 cm vel ah lin tur a ni. Aieng zung chin tur chu chin hma in mancozeb 75 % WP (3gm/1 litre tui) a minute 30 tal chiah a, daihlimah darkar 3-4 dah hul phawt a chin tur a ni. Hetia a chi a hman tur fungicide a kan chiah hian natna hrik leia awm leh aieng zung a chi a hman tur a natna hrik awm thei lakah a veng. Tin, vawi 2/3 thlawh fai a ṭul ang, rih vur a ngai bawk. Ram hectare hmunah Bawngek/ ran ek leitha 30-40 tonnes, Urea kg 22, S.S.P kg 250 leh M.O.P kg 33 phul ang che. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>SAWHTHING: </b>Sawhthing hi Aieng ang bawkin April thla-ah chin a ni tlangpui a, hectare khat ram zauah sawhthing zung kg 1500-1800 a tawk a, Sawhthing chi hian mit 2/3 a nei ngei tur a ni. Sawhthing hi terrace-a chin ngei a ṭha. Sawhthing chin tur hi Diathane M-45 (3gm/1 litre tui) in minute 30 chiah tur.  A chinna tur lei hi nursery seedbed ang deuh  a tih pawn cm 15 a sang, a sirah tui luanna (drainage) siam bawk tur, tlar leh tlar cm 25 leh a bi inkar cm 25 danah lin tur a ni.</p>");
+						  $("#thlaivenhim").append("<p  style='text-align:justify;'>Tunah chuan khua a lo lum ṭan avangin, rannung a lo pung duh em em a. Thlai hmunah rannung chi hrang hrang ven nan Malathion 50 EC emaw Dimethoate (Rogor 30% EC) @ 2gm/litre tui pawlh a kah tur, kahnawn a tul chuan ni 15 hnuah kah nawn leh tur a ni, Neem oil @5ml/litre tui pawlha a kha hian rannung thlai rawn bawm tur a hnawh bo bakah rannung kah fuh chuan an thi phah ve thei.</p>  ");
+						  $("#servenhimna").append(" <p style='text-align:justify;'><b> PSYLLA ,WHITEFLY LEH LEAF MINER : </b>Heng rannung ho te hian ser hnah a chawrno ṭangin tuihnang an hip chhuah ṭhin avangin March thlaah a par a tla leh vak ṭhin a. Hemi ven nan hian kum khatah vawi 5 kah a ngai a ni. A hmasa ber chu January thla-a a par hma a kah leh tur a ni a, vawi hnihna chu March thla aṭanga April thla chhungin kah leh tur a ni. A kah nan Malathion 50 EC emaw Dimethoate (Rogor 30 %EC) @ 2 gm/litre tui pawlh a hman tur. <br>&emsp;&emsp;                      Ser natna, a pȃn te, a ṭang hmawr ro leh nget te a lo lan chhuah chuan BORDEAUX MIXTURE siam dan December thla-ah en rawh.	</p> ");
+						   $("#sanghakhawi").append(" <ol type='1'><li>	Sangha man hralh  hun a ni ta. Hmaih miah lo a Sangha man kim vek tur chuan a tui paih  kang vek a ngai.</li><li>	Sangha man zat Fishery Office hnaih ber-ah record atan report pek tur a ni.<li>	Sangha thar khawi lehna tur Dil thar buatsaih leh nghal tur.</li> ");
+						    $("#sanghakhawi").append("<br><br><b>SANGHA DIL BUATSAIH DAN:</b><br><ol type='1'><li>	A hmasa ber in Sangha hralh tlak loh leh hnim thenfai nan<b> MAMAL OIL CAKE </b>Hectare khatah kg. 2,500 leh <b>ENDRIN 0.01-02 PPM.</b> hman tur a ni. Mahse, Mizoramah chuan Dil tih ro-in sangha duh loh te chu a thi mai a, tin, hnim pawh awlsam takin kutin pawh fai mai theih a ni.</li><li>	Dil kam vel te pawh a fai a ṭul a, tui puh ruknate a awm chuan siam ṭhat vat tur a ni.</li><li>	April thla laihawl velah Chinai thi kg. 500 hectare khatah phulin tui luh tir leh tur a ni.</li>");
+				}
+				else if(status=="May")
+				{
+								$("#january").append("<p  style='text-align:justify;'>Leilet neitute tan June thlaa Buh phun sawn tur buh chite kui ṭiah tur a ni.</p>");
+								$("#january").append("<p  style='text-align:justify;'><b>BUH KUI ṬIAH DAN:</b><br>(a)	A chi thlan dan: A chi gm 200 emaw 300 vel tui litre 10-ah chiah la, buh chi lang zawng chu paih in, a dangte chu tui thianghlima silfai hnuah dah hul tur a ni<br>(b)	Fur buh chi kui-na siam dan: Buh chi kuina tur chu 1.25 metre a zau, metre 10 a seiin siam ang che. Tlem a pawng sang deuh a siam tur a ni. Hetiang kuina inkarah hian kalna turin feet khat vel zuah awl zel ang che.<br>(c)	A chi ngai zat: Khi tiang kui-na 1.25 mtr leh 10 mtr a zauah hian buh chi gm. 500 tuh tur a ni. Bigha khat a phun sawn atan buh chi kg 4 a tawk. Buh ṭawi thar rang peng ngah chi ni 110-115 a thar ho hi tuh aṭanga ni 20 chhung ngei a phun sawn a ṭha ber. Chuvangin, phunsawn hun duh danin a tuh hun pawh tihdanglam a ṭul ang.</p>")
+								$("#january").append("<p  style='text-align:justify;'><b>LEILET BUH CHI ṬHATE </b><table><tr><th>Buh hming</th><th><center>Kûi aṭanga seng theih hun(ni zat)</th><th>Kui hun  (thla)</th><th>Phunsawn hun(thla)</th><th>Seng hun (thla)</th></tr><tr><td><center>Gomati</center></td><td><center>130-135</center></td><td><center>June-July</center></td><td><center>June-July</center></td><td><center>Sept-Oct</center></td></tr><tr><td><center>CAU -R1</center></td><td><center>80-100</center></td><td><center>May-June</center></td><td><center>June-July</center></td><td><center>Sept-Oct</center></td></tr><tr><td><center>PANKAJ</center></td><td><center>145-150</center></td><td><center>May-June</center></td><td><center>June-July</center></td><td><center>Oct</center></td></tr><tr><td><center>DRRH-I (Hybrid)</center></td><td><center>125-130</center></td><td><center>May-June</center></td><td><center>June-July</center></td><td><center>Oct</center></td></tr><tr><td><center>AIZAWN(Ṭai)</center></td><td><center>130-135</center></td><td><center>April-May</center></td><td><center>June-July</center></td><td><center>Oct</center></td></tr></table></p>")
+								$("#january").append("<p  style='text-align:justify;'><b>THLASIK BUH: </b>Buh variety engpawh Kharif a chin te hi Rabi (thlasik) ah pawh a chin theih vek. Hmun vawt zual lai, dai khang awm theih na hmunah erawh chin loh emaw khawvawh zual hmaa seng zawh hman turin a chin hun an ti hma mai tur a ni. </p>");
+						  $("#thlaivenhim").append("<p  style='text-align:justify;'>Buh chi hrisel rannung leh natna laka fihlim finfiah ngei kan thlang tur a ni. Buh kha Blast natna (hnah leh buh kung peng hrang hrang a val thlen tu) laka vennan tuh hma-in a chi kg 1 kha Tricyclazole 75 WP gm 1 emaw Carbendazim 50 WP gm 2 hisap in a chi bual tur a ni. Bacterial Leaf Blight of Paddy (hnah rau natna, a hnahah a dung thla zawngin a rang ruak ruak thin) ven nan a chi kha Copper oxychloride 0.1 gm emaw Streptocycline 0.1 gm tui litre khat a pawlhin Buh chi kha minute 20 chiah tur. Heng Buh natna te hi Buh chi atanga kaichhawn theih anih avangin tuh hma in Buh chi kha pesticides a sawngbawl ngei ngei a tha. </p>");
+						  $("#serenkawlna").append("<p  style='text-align:justify;'>Ruahtui tlak ṭhat kum chuan May thla hi thlai leh thei phun sawn hun ber a ni. Ser phun zawh veleh tui pek vat ni se a ṭha. Psylla leh White Fly leh Leaf Miner vennan Imidacloprid 17.8 % SL emaw Dimethoate 30% EC @ 2 ml/ tui litre 1-a pawlhin ser kung kap ang che.  </p>");
+						   $("#sanghakhawi").append("<p  style='text-align:justify;'>1. May thla kar hmasa berah Fertilizers leh Leiṭha January thlaa mi ang khan pe ang che. <br> 2. May thla kar hnihna-ah dil tui a lo hring deuh ta tihah Common Carp inches 2 aṭanga inches 3 vel dil hectare khatah 500 zel dah tur. </p>");
+				}
+				else if(status=="June")
+				{
+						$("#january").append("<p  style='text-align:justify;'>Behliang, Bete a zam chi pawh a tuh ṭan theih a. Tin, Chhawhchhi theh pawh a hun ṭan bawk.</p>");
+						$("#january").append("<p  style='text-align:justify;'><b>BUH PHUN SAWN:</b>  Buh thar rang leh ṭawi peng tam chi i chin chuan ni 8-15 a upa bi khatah zai khat te te in phun ang che. A thar hma chi, ni 115 a thar thei ho hi chu a tlarin hlat zawng cm, a kung inhlat zawng cm 10 in phun ang che. Tin, ni 140 a thar theih ho hi chu tlar inhlat zawng chu cm 20, a kung inhlat zawng cm 25, a kung inhlat zawng cm 25 in phun thung ang che. A thi a awm reng reng in ni 7 chhung ngei a phun khah (gap filling) leh tur a ni. A phun sawn aṭanga ni 2 emaw 3 ah tui cm 5 vela thukin a puitlin thlengin chim tur a ni. Ni 20 na-ah leh ni 40 na-ah thlo ang che.</p>");
+						$("#january").append("<p  style='text-align:justify;'><b>DAL (AHAR/TOOR DAL/RED GRAM/ PIGEON PEA):  </b>A chin hun tlangpui chu June- July thla hi a ni a. Kan ramah hian heng variety te hi-                                chin chi a ni. Hectare khat-ah kg 12-15 a tawk a, a tlar inkarah 75 cm leh a kung leh kung inkarah 30 cm zuah tur. Farm Yard Manure (Ranek leitha) 4.5 tonne/ha leh Leichi (Fertilizer) N (Urea)- 15 kg/ha, P<sub>2</sub>O<sub>5</sub> (SSP)- 40 kg/ha pek a ngai tlangpui. Chin hma in a chi hi Carbendazim emaw Thiram @ 2 gm/ 1 kg chi in a chinhma darkar 24-ah chiah/ bual a tha, Biopesticides ah <i>Trichoderma viride @</i> 4 gm/ 1 kg chi pawh a hman theih.</p>");
+						$("#january").append("<p  style='text-align:justify;'><b>CHHAWHCHHI<i> (Sesamum indicum L.)</i>: </b>Kan ram-ah hian Chhawhchhi Local variety hrang hrang kan ching a, kan boruak sik leh sa pawh a ngeih viau a hriat a ni, 1-1200 mts Above Mean Sea Level a chin theih anih avang hian kan tlangram loneih (jhum) ah kan ching tlangpui, hnawng a mamawh hnem avang hian fur laia chin a fuh ber mahse lei hnawng tui luan ral chaklohna ah a tha duh lo. A chi mammawh zat hi a theh a theh (Broad casting) ah 65 kg/ha leh a line a chin chuan 54 kg/ ha mamawh tlangpui a ni.  Chhawhchhi chi tur chu chin hma in Thiram (3gm/1 kg chi) in a chi a natna hrik chambang tam tak lakah a veng. Chhawhchhi hi hnim dip a huat avangin chin atanga ni 15-25 chhung hi hnim thlawhfai that tur. </p>");
+						  $("#thlaivenhim").append("<p  style='text-align:justify;'>Ṭhal buh April thla lam a phun sawn kha rannung laka venna May thla a mi ang khan chhunzawm tur. Sawhthing pawh a tȃm vennan April thla-ah a chi ling hma khan fungicides tui a chiah a ni a, a lo tiah hnuah tam hri a awm tih rinhlelh anih chuan Bordeaux mixture (1%) in a chin na leilung kha hneh deuh a kah a tha. July atanga October chhung hian Sawhthing kung nget pangang an tam duh thin a, neem oil @ 5ml/ litre tui in a kung leiseh bul leh a hnah te kah tur, eng thang (light trap) hmang pawhin a vai khawm theih. Tin, Aphids leh Jassids lak a French bean vennan Imidacloprid 17.8 % SL emaw Dimethoate 30% EC emaw Lamda-cyhalothrin @ 2.5ml/ 1 litre tui pawlhin kah tur.  </p>");
+						  $("#serenkawlna").append("<p  style='text-align:justify;'>Hemi thla hi ser leh thei zawng zawng phun sawn hun a ni. February thla lama khur laih sa-ah khan phun tur a ni.  </p>");
+						   $("#sanghakhawi").append("<p  style='text-align:justify;'>BAWNGEK LEIṬHA leh Fertilizers a hnuaia mi ang hian pek leh tur a ni.  </p>");
+						   $("#sanghakhawi").append("<ol type='1'><li style='text-align:justify'>Bawngek  - 80 0 Kg/Ha.</li><li>S.S.P   - 20Kg/Ha. </li><li>UREA Kg - 8 Kg/Ha.</li><li>M.O.P  - 4Kg/Ha.</li><p>EMAW / OR </p></ol><ol type='1'><li>D.A.P   - 7.00Kg/Ha. </li><li>UREA - 5.25Kg/Ha. </li><li>M.O.P - 4.00Kg/Ha.</li></ol>");
+				}
+				
+				else if(status=="July")
+				{
+						$("#january").append("<p  style='text-align:justify;'>Kawlbahra, Bekang leh Bete (a zam chi leh zamlo chi) tuh hun a ni bawk. </p>");
+						$("#january").append("<p  style='text-align:justify;'><b>BUH PHUN SAWN:</b>  Buh phun sawn dan tlangpui chu thla hmasa lamah kan sawi tawh kha. Mizoram-ah chuan July thla hian kan phun sawn deuh ber a, buh phun sawn hma ni 2 emaw ni 3-ah Fertilizer pek tur a ni. Fertilizer pek hnuah dai kawi leh tur a ni. UREA 13.0 Kg. D.A.P 11.5 kg leh M.O.P 9.0 kg bigha khatah pe ang che. </p>");
+						$("#january").append("<p  style='text-align:justify;'><b>BEKANG <i>(Glycine max)</i>: </b>Bekang hi June thla tawp lam emaw July thla tir lamah a chin chi a, hectare khat-ah a chi mamawh zat hi kg 20-30 a ni a, 45-60 cm X 25 cm inkar hlata chin tur a ni. A chi chin hma in Bio- fertilizer Rhizobium culture a chiah phawt duhthusam a ni. Fertilizer hi 50 kg Urea + 100 kg DAP, 20 kg Sulphur, 25 kg Zinc Sulphate leh 10 kg Borax hi hectare khat a mamawh a ni.</p>");
+						$("#january").append("<p  style='text-align:justify;'><b>KAWLBAHRA:</b>  A chi atan a bul cm 40-50 piah lam (a hrui ler lam)-a mi chauh hman tur a ni. Tin, a chi atan chuan cm. 20-25 a sei, chang li nei hman tur a ni. </p>");
+						  $("#thlaivenhim").append("<p  style='text-align:justify;'>Buh hmunah rannung te- Leaf folder (a hnah khawrtu pangang), Plant hoppers, Stem borer lak a vennan Chlorpyriphos 20 EC emaw quinalphos 25 EC emaw Triazophos 40 EC @ 2.5 ml/1 litre tui pawlh a kah tur. Blast  (Hnah val) natna in a beih nasat chuan Tricyclazole 75 % WP (0.6 g/1 litre tui) emaw Carbendazim 50 % WP (1g/litre tui) a kah tur.<br>&emsp;Sawhthing kung nget pangang hian July- October thla chhung hian Sawthing an bei nasa tlangpui a, an tam viau chuan Nimbicidine emaw Neem oil @ 2-5 ml/ 1litre tui emaw Carbofuran 3G @ 30 kg/ha a enkawl tur a ni. Carbofuran hi antam chi ang tiat vel a hraw nawinawk rawng a ni a, thlai bul leiah tlem te te a phul tur a ni. Sawthing tam hri in a beih hi kan ramah pawh a thleng fo thin a, fimkhur hle a ngai. A chin hma-a damdawi a kan sawngbawl bakah a chinna hmunah tam hri hi July thla hian a rawn inlan tan a, Copper oxychloride @ 2g/1litre tui emaw Bordeaux Mixture (1%) tui a leilung chiah huh emaw kah tur. </p>");
+						  $("#serenkawlna").append("<p  style='text-align:justify;'>Ser sen tla hi Thlangdar zuk vang ni ber a ngaih a ni. Thlangdar leh rannung dang reng reng te hi a puitlin tawh hnu chuan Insecticides pawhin kap ila a sawt tawh mang lo a. Chuvangin, October thla vel a a tui lai-in a tui vai a, tih chhiat leh an sen tet lai November-January Insecticides-a kah hi ngaih pawimawh hle tur a ni. Thlangdar kah nan hian Malathion 50 EC emaw Dimethoate (Rogor 30 %EC) @ 2gm/litre tui pawlh a hman tur.<br>&emsp;Ser phun hlim hlawt-a mamawh hmasak ber chu tui a ni a. Chuvangin, phun aṭanga kar khat chu nitin tui pek a ṭha. Tin, ngil tak a a din theih nan mauvin chelh ding ang che.  </p>");
+						   $("#sanghakhawi").append("<p  style='text-align:justify;'>1. Thla hmasa ang bawkin BAWNGEK LEIṬHA leh FERTILIZERS pek tur a ni. <br>2.	A hnuaia mi ang hian Sangha chi (a note inches 2-3 a sei) dah tur a ni.<br>&emsp;a)	CATLA		-	1250Nos.Hectare 1-ah<br>&emsp;b)	SILVER CARP	-	1250Nos.Hectare 1-ah <br>&emsp;c)	ROHU		-	750Nos.Hectare 1-ah	<br> &emsp;d)	GRASS CARP	-	750Nos.Hectare 1-ah <br>&emsp;e)	MIRGAL		-	500Nos.Hectare 1-ah 	<br>&emsp;&emsp;Total			-	4,500Nos.Hectare 1-ah   </p>");
+				}
+				else if(status=="August")
+				{
+							$("#january").append("<p  style='text-align:justify;'><b>ZIKHLUM, PARBAWR LEH BULBAWK:   </b>Zikhlum leh Parbawr kui ṭiah nan seedbed ft. 4-a zau, ft. 12-a sei, inches 6-8 a pawngin siam tur a ni. A chung ft. 4-a sangin siam la, bawngek leidur ṭin 2 vel dip taka chawh pawlhin huih rual ang che. Hetiang chi kuina 10 vel hi hectare 1 atan a tawk. Seedbed 1-ah 75 gm zel theh tur a ni. Chi kui hmain a chi kha Trichoderma viride (2-3g/kg seed) emaw Thiram (2-3g/kg seed) emaw a china hmun kha Dithane M-45 (2g/liter tui) emaw Bavistin (1g/liter tui) a chiah huh in natna tam tak lakah kan venghim thei.<br>&emsp;                                                     Bulbawk hi a no laia ei chi a nih avangin a indawt deuh a thar turin a chi pawh a indawt deuhin kui ṭiah a ṭha. Hectare 1 atana chi kg 1-1.5 a tawk.</p>");
+							$("#january").append("<p  style='text-align:justify;'><b>Bawkbawn : </b>A tlangpuiin a chi hi 370-500 gm hectare khatah mamawh a ni a. Seedbed ft.12 x ft 4-ah tuh la, hei hi ṭin tawi hmun atan a tawk ang. Ni 20-25 vel aṭangin hnah 4 vel a rawn nei ang a, inches 6 vela sei a ni bawk ang, hei hi a phun sawn hun lai tak a ni. Ft.2 leh ft.2.5-a inhlatin i phun ang a, ni 4/5 chhung tui pe ang che. D.A.P 700 gm., M.O.P 700 gm metre 10 bialah chawhpawlh ang che. Tin, a par dawnin UREA 200 gm. Dang metre 10 bial atan pek leh tur. Bawkbawn bul aṭanga inches 4 vela hlaah thirfiante 2 zelin pe ang che. </p>");
+							$("#january").append("<p  style='text-align:justify;'><b>Carrot :</b> Hectare khat hmun atan a chi Kg.7-9 a tawk. Lei cheh dipah bial hrang hrang ft.4xft.8 emawa siamin a chi khat mawi tawkin rual taka a ṭo theih nan leidip nen a chawhpawlhin theh darh rawh. Thlur ft.1 danah siamin leidip nen chawhpawlhin theh darh rawh.  Thlur ft.1 danah siamin leidip nen chawhpawlhin a chin theih bawk. A chi chu ni 8 velah a ṭo ṭan a, a lo len deuhah suat thawl tur a ni. </p>");
+						  $("#thlaivenhim").append("<p  style='text-align:justify;'>  Buhpui kung nget ven Carbofuran 3G(30 kg/ha) buh hmun a kungnget awmna kung bula phul emaw Chlorpyriphos 20EC emaw quinalphos 25 EC emaw Triazophos 40 EC @ 2 ml/ 1 litre tui pawlh a kah tur. Rice hispa (rannung te reuh te an taksa tuamtu kawr ah hling tam deuh nei) hi fur ruahtui tam laiin an tam duh a, buh hnah an dit rau bakah ice Tungro Virus natna an pudarh thin, an tam viau chuan  a Stem borer (kung nget pangang) kah nan a hman pesticides te khi hman ve tho tu a ni.<br>Sawhthing kung nget pangang July- October thla chhung sawhthing kung beitu thin enkawlna July thla ziah lan angin sawhthing hmunah a la tam chuan enkawl chhunzawm tur. Chutiang bawkin Sawthing tam thlentu natna te pawh July thla ang bawk hian enkawl chhunzawm tur a ni.</p>");
+						  $("#serenkawlna").append("<p  style='text-align:justify;'>Ser huan, ruam leh zawl deuhvah te tui a tlin chuan paih kang zung zung tur a ni. Tin, hnim a ṭhan duan lai a ni avangin sam fai zung zung tur a ni. <br> Ser a la tet lai deuh phei chuan hnim sam fai hi a pawimawh hle a. Vaimim leh buhte chuan lei an ei dak nasat avangin chin pawlh chi a ni lo. Thlai dang reng reng chin pawlhin Fertilizer pek tel ngei tur .  </p>");
+						   $("#sanghakhawi").append("<p  style='text-align:justify;'>Thla hmasa ang bawkin <b>BAWNGEK LEIṬHA leh FERTILIZERS </b> pek tur a ni. </p>");
+				}
+				else if(status=="September")
+				{
+						$("#january").append("<p  style='text-align:justify;'>Thla hmasa ang bawkin Zikhlum , Knolkhol, Parbawr, Turnip, Raddish, Tomato , Carrot , Lettuce, Purun Sen/Var leh Kauphek te kui leh tuh a hun a, phun sawn a hun bawk. Tin, Dailuah ang chi leh thlai hriak pai lam chi te pawh tuh a hun ṭan bawk. </p>");
+						$("#january").append("<p  style='text-align:justify;'><b>TOMATO: </b> A kui ṭiahna hmun tur chu thlai dangte ang bawkin seedbed (3X0.6 m leh 10-15 cm a sang) siam a ṭha a; a chi 250-300g hi hectare khat atan a tawk a. Chin hma-in damping-off natna (lawng hi) lak a vennan Trichoderma viride (4g/ kg chi) emaw Thiram (2g/ kg chi) in bual tur. Fanghmir sen leh Tlumpi/Vual laka inven nan Carbofuran 3G emaw Chlorpyriphos 20 EC a hman chi bawk. FYM (Ran-ek leitha) (25 tonne/ ha) a phunna tur leileh laiin pawlh tur. A tiak phunsawn hma hian fipronil (1.5ml/litre tui) leh Dithane M-45 (2.5g/litre tui) in minute 5-6 chiah phawt a tha.  </p>");
+						$("#january").append("<p><b>THLAI ṬHENKHAT PHUN SAWN DAN</b><table><tr><th>Sl.No</th><th><center>&nbsp;Thlai hming</center><th><center>&nbsp;A tlar inhlat zawng</center></th><th><center>&nbsp;A kung inhlat zawng </center></th></tr><tr><td>1</td><td><center>Tomato	</center></td><td><center>Inches 36	</center></td><td><center>Inches 24 	</center></td></tr><tr><td>2</td><td><center>French Bean	</center></td><td><center>Inches 12-18	</center></td><td><center>Inches 6-8 	</center></td></tr><tr><td>3</td><td><center>Zikhlum	</center></td><td><center>Inches 12-18	</center></td><td><center>Inches 18 	</center></td></tr><tr><td>4</td><td><center>Parbawr	</center></td><td><center>Inches 18	</center></td><td><center>Inches 18	</center></td></tr><tr><td>5</td><td><center>Bulbawk	</center></td><td><center>Inches 12	</center></td><td><center>Inches 10 	</center></td></tr><tr><td>6</td><td><center>Carrot	</center></td><td><center>Inches 6	</center></td><td><center>Inches 6 	</center></td></tr><tr><td>7</td><td><center>Motor Chana	</center></td><td><center>Inches 6	</center></td><td><center>Inches 6 ( Mu 1 zelin) 	</center></td></tr><tr><td>8</td><td><center>Dailuah	</center></td><td><center>Inches 10-12	</center></td><td><center>Inches 4-6 	</center></td></tr><tr><td>9</td><td><center>Bawkbawn	</center></td><td><center>Inches 24-30	</center></td><td><center>Inches 24-30 	</center></td></tr></table> </p>");
+						  $("#thlaivenhim").append("<p  style='text-align:justify;'> Buh variety thenkhat Gomati, CAU R-1 te hi June thla a kan tuh chuan September hian vui a lo insiam tan ang a, thlangdar sawl zit zet, rimchhe tak mai an lo pung tan ang, he thlangdar hian buhfang insiam tanah a tuihnang a dawt a, buh a lo sip hah thin, an vennan Malathion dust 5 % (a dip powder anga hman chi) emaw Malathion 50 EC @ 2ml/ litre tui pawlh a kah tur. Tin, Rice Hispa thla hmasa a kan tarlan tawh kha a la tam a, buh a la tihchhiat chuan Chlorpyriphos 20 EC emaw Quinalphos 25 EC emaw Triazophos 40 EC @ 2 ml/ 1 litre tui pawlh a kah tur. </p>");
+						  $("#serenkawlna").append("<p  style='text-align:justify;'>Ser huanah thlasik thlai chin pawlh hun a ni. Be lam chi hi chin pawlhin a ṭha, thlasik thlai chin dawn chuan fertilizer pek ṭhat a ṭul hle. Thlai dang nen i chin pawlh khan lei ṭha a ei ral ve dawn avangin serin a mamawh tawk a hmu lovang tih a hlauhawm a ni. Tin, ser tla ven nan April leh June thlaa kah tur kan tih kha tun hi a kah hun a ni. Tin, February thlaa fertilizer mamawh tur zat tarlan kha hemi thla hian a chanve pek tur a ni.</p>");
+						  $("#serenkawlna").append("<p  style='text-align:justify;'>Ser kung nget enkawl dan:- </p><ol type='1'><li>Petrol-in puanthem emaw, lapua emaw chiah huha, a nget kuaah hnawha hluma char leh tur a ni</li><li>Synthetic pyethroid group a awm Cypermethrin a nget kua-ah huh hnap a kah luh tur</li><li>Ser kung bulah hnim vawm vûm (green mulching) loh tur. </li><li>Ser kung ṭang ro tawhte kha thliah/thlak tur.</li></ol>");
+						   $("#sanghakhawi").append("<ol type='1'><p  style='text-align:justify;'> <b>BAWNGEK LEIṬHA LEH FERTILIZER</b> te kha a hma ang khan pek leh tur a ni. </li><li>August thlaa pek ang bawkin <b>ARTIFICIAL FEED</b> pek leh tur. </li><li>Khawi maw lai kil khat aṭangin Lenin Sangha man a, a len lam teh ang che. Duhthusam a nih loh chuan Fishery Office hnaih ber rawn rawh. Tin, Sangha i man kha dila i dah luh hmain <b>POTASSIUM PARMANGANATE</b> 5% tuiah hnim tur a ni.</li></ol>");
+				}
+				else if(status=="October")
+				{
+						$("#january").append("<p  style='text-align:justify;'>Thla hmasaa thlai phun sawn leh turte kan sawi kha a la hun a, Alu, French Anṭam, Kauphek, Chana leh Turnip te theh ṭiah a hun bawk.</p>");
+						$("#january").append("<p  style='text-align:justify;'><b>SUNFLOWER (Nihawi):</b> A chi ṭha Agriculture Department a mi Arun, Morden te ching ang che. A chi chu chin hmain Dithane M-45 nen chawhpawlh ang che, a chi kg1 ah Dithane M-45 gm3 chawhpawlh a tawk. Chin laiin lei chu a hnawng ṭha tawk tur a ni. Chuti a nih loh chuan a ṭiak ṭha thei lovang. Line (bi tlar) 60 cm a inhlat zelin siam la, line 1-ah cm 20 a inhlata chin tur a ni, a bi thuk lam chu cm 3 aiin a thuk tur a ni lo. Hectare 1-ah kg 8-10 vel a chin theih a ni.</p>");
+						$("#january").append("<p  style='text-align:justify;'><b>ALU: </b>A chi mamawh zat leh a lin dan ṭhenkhatte chu January thlaah te kan sawi tawh kha. A chi atan hian artui tia vel a, a vang lam hawlh tlanga cm 2.5 a tawk a, a lian deuh te chu a ṭul dan a zirin hmun 2/3 ah zai phelin, a chi tur dang te nen Dithane M-45 gm 5 tui litre 10-a chawhpawlh a minute 10 chhung chiah tur a ni. Hemi hnu hian daihlim-ah ni 2 chhung dah leh a, October ni 15 hnu-ah lin tur a ni. Lei thuk takin, dip, dur ṭha takin let ang che. D.A.P.- 43.4 kg, UREA- 35 kg, M.O.P- 33.0 kg leh bawngek nen ṭin khat hmunah chawhpawlh ang che.</p>");
+						$("#january").append("<p  style='text-align:justify;'><b>FIELD PEA (CHANA): </b>October ni 15 vel ṭangin chin ṭan tur a ni. Lei me leh lei tak inpawlh, lei sanghet lutuk lo a ṭha. A chi hi hectare khat-ah kg 75-80 a tawk a, a chi thlakna tur line tih khuar a, a inkar 30-40 cm zuah a, 5-6 cm a thukah a chi tuh tur. Tuh hmain zan khuain tui ah chiah la, a tuk ah tuh ang che. Thar rang leh ṭawi peng tam chi i chin chuan bi khatah mu hnih te te in phun ang che.</p>");
+						$("#january").append("<p  style='text-align:justify;'><b>DAILUAH SEN (LENTIL): </b>Lui lei, ṭiauvut leh leitak inpawlh, hnim ṭawih awmna hmun a ngeih ber. Hectare 1-ah UREA Kg.3., D.A.P Kg.76 LEH BAWNGEK quintal 30 chawh pawlh ang che. Hectare1-ah Kg. 45 a chin theih a, inches 10-12-ah thlur rin la, inches 4-6 danah phul den den ang che. </p>");
+						$("#january").append("<p  style='text-align:justify;'><b>TOMATO ENKAWL DAN: </b>Tomato hi a peng tam lutuk tur ven a ngai a, peng ṭhenkhat chu hlawithlak mai tur. Tin, a ṭanpuitu tur thing ṭang emaw, mau phel emaw siam sak a, chumi chungah chuan zam tir mai tur. Nikang lutuk-ah chuan a zar daihlimtu tur siam sak a, chawhnu lamah ni eng hmu lo tura zar daihlim a ṭha.</p>");
+						$("#january").append("<p  style='text-align:justify;'><b>THLAI DINGLAI ENKAWL LEH HNA DANG THAWH TURTE:</b> Thlasik thlai August thla leh September thlaa kan tuh leh phun sawn te kha enkawl zui a ngai. Tin, buh thar rang seng zawh veleh, thlasik thlai dang-Wheat te, Tel Anṭam te chin nan lei buatsaih nghal tur a ni. </p>");
+						  $("#thlaivenhim").append("<p  style='text-align:justify;'> Buhfang insiam tur tuiril lo dawt ṭhin tu Thlangdar sawl zit zet rimchhe tak mai buhfang dawttu leh Rice Hispa vennan hian September ziahlan pesticides te kha hman leh mai tur.</p>");
+						  $("#servenhimna").append("<p  style='text-align:justify;'> Vawi lina atan rannung kah dan kan sawi kha September thla lamah hman loh chuan, tun thlaa kah tur a ni. Tin, a damlohna <b>Citrus Canker</b> enkawl nan <b>STREPTOCYCLINE</b> gm 30, tui litre 150-ah pawlhin kap ang che. </p>");
+						   $("#sanghakhawi").append("<ol type='1'><li> Thla tina sawi angin <b>BAWNGEK LEIṬHA leh FERTILIZERS</b> te pek leh tur.  </li><li> Artificial Feeding a hnuaia mi ang hian pek tur a ni:- <br>a)	MUSTARD OIL CAKE	-	Kg. 3 nitin pek tur. 	<br>b)	RICE BRAN	             -	Kg. 3 nitin pek tur. 	<br>c)	Dil bul vela hnim sang deuhte sam faia, thing buk deuh te thlak tur.</li></ol>");
+				}
+				else if(status=="November")
+				{
+					$("#january").append("<p  style='text-align:justify;'>Thlasik thlai chin nan leh phun sawn nan chuan a tlai lam tawh. Mahse French Anṭam leh Kauphek te hi chu thla chawhma lampang hian theh a la pawi lem lo. Tin, Tomato a la phun sawn theih. November thlaa chin tur pawimawh ber chu Wheat hi a ni.  </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>WHEAT CHIN DAN:</b><br> A chi ṭha	<br>a)	Sonali-Ni 115-120-ah a thar. 		<br>b)	U.P-263-Ni 115-120-ah a thar. 	<br>	c)	H.P-1102-Ni 115-120-ah a thar. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>A LEI DUH ZAWNG:</b> Lei tak leh ṭawih pai tam leh lei tak leh lei me inpawlhna hmunah te a ṭha duh ber. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>LEILUNG BUATSAIH DAN:</b> October thla lama nipui thlai seng zawh veleh, lei leh phut tur kan tih kha. Hemi hnu hian vawi 4/5 let chhuak leh la, dip taka i vuak sawm hnuah hui rual leh ang che. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>A CHIN DAN: </b>November ni 5 aṭanga ni 30 inkar hi a chin hun lai a ni. February leh March thla lama fur hma hruai ruah a sur ṭhinna ramah chuan November ni 20 hma ngeia tih zawh ngei tur a ni. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>A CHI MAMAWH ZAT LEH A TUH DAN:</b> Ram hectare khat atan Wheat chi Kg.120 a ngai.  Cm 20-25 danah a tlarin rin khuar la, khuarah chuan phul zei zei ang che. Mahse, cm 5 aia thuka tuh lo turin fimkhur hle ang che.<br>&emsp;                  A chi tuh hma hian a chi hi Thiram emaw Bavistin @ 2.5 gm /kg seed (chi) emaw <i>Trichoderma viride </i>gm 4 in a chi kg 1 chiah phawt a tha, hei hian wheat natna thenkhat lakah a veng. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>TUI PEK DAN:</b>  Lei a ro chuan a chi tuh hma ni 30-ah tui pe ang che. Tui lak i neih ṭhat chuan chin aṭanga ni 20-25-ah tui pe la, a vawi hnihna atan a par lai, a tuh aṭanga ni 75-85 velah pek leh a ṭha. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>A THAR ZAT:</b> Ṭin 2 ½ hmunah ruahtui ringin quintal 18-20 a thar theih. Tui pek theihna hmunah chuan quintal 25 thleng pawh a thar theih.</p>");
+					$("#january").append("<p  style='text-align:justify;'><b>TEL ANṬAM:</b> M-27 hi ni 95-100-ah a thar thei. Vawi 4-6 leh a hrut rual tur a ni. A chi Kg. 10-15 Hectare khat atan a tawk (Bigha 1-ah Kg.2) UREA Kg. 96.2,D.A.P Kg.87, M.O.P Kg. 67 hectare khatah phul ang che. </p>");
+					$("#january").append("<p style='text-align:justify;'><b>SER KUI ṬIAHNA (NURSURY SAWNGBAWL DAN): </b> Ser kui ṭiahna chu tlema pawng deuh a siam tur a ni. Lei chu ngun tak a lehphuta, dûr dapa siam tur a ni. A lei ban chi te, lei tui tlin theihna reng reng chi te chu hman loh tur.<br> A len lam chu hetiang hian siam a ṭha:- <br>	1.	A VANG LAM: Metre 1.20 aṭanga Metre 1.50 vel <br>	2.	A DUNG LAM: Metre 2 aṭanga Metre 2.5 vel.<br> Tin, bial inkarah tui kawng cms.50-a zau siam tur a ni. </p>");
+					$("#january").append("<p  style='text-align:justify;'><b>A CHI LAK DAN:</b> Ser rah aṭanga a mu lak hlim hlawl a ṭha ber a. Ser mu, ser aṭanga lak chhuah hnu darkar 24 chhung ngeia tuh ni se a ṭha ber. Eng eng emaw avanga chin mai theih a nih loh chuan, tuia sil faia hmun ro daihlimah ṭiau lei nen chawhpawlha dah ṭhat tur a ni.  </p>");
+					$("#january").append("<p   style='text-align:justify;'><b>A CHIN DAN TUR : </b><ol type='1'><li> Tlar leh tlar inhlat zawng		-	Cm 15.</li><li> A chi leh chi inhlat zawng		-	Cm 2.3. </li><li> A thuk zawng				-	Cm 2.3. </li></ol></p>");
+						   $("#sanghakhawi").append("<p  style='text-align:justify;'> <ol type='1'><li>Thla tina sawi angin <b>BAWNGEK LEIṬHA</b> leh <b>FERTILIZERS</b> te pek leh tur. </li><li>Hnah hring chan sawm Grass carp ei tur pek a ngai bawk. </li><li>Sangha ṭhan chak dan enfiah a ṭha. </li></ol></p>");
+				}
+			
+				else if(status=="December")
+				{
+					$("#january").append("<p style='text-align:justify;'>December thla hian buh January thla lama phun sawn tur atan kûi ṭiah a ṭha. </p>");
+					$("#january").append("<p style='text-align:justify;'><b>THLAI DING LAI ENKAWL ZUI TUR:</b> Thla hmasa ang bawk khan thlasik thlaite enkawl zui zel tur a ni. Alu enkawl hun a la ni bawk</p>");
+					$("#thlaivenhim").append("<p style='text-align:justify;'> Alu leh Tomato tȃm (pûl) ven nan thla hmasa a mi anga tih zui ni se. Tomato leh Bawkbawn vuai ringawt (Bacterial wilt) vennan hian a kung damlo paihfai leh a tul anih chuan Streptocycline 0.3 gm kha tui litre khat a pawlha kah tur. Bacteria hrik hian Tomato hnah ah leh a rah ah te val uk de thet thet a thlen thin a, he natna hrik laka fihlim hriatchian a chi emaw a chi kui hma a damdawi a sawngbawl bak a he natna hrik hian harsatna min thlen chuan Copper oxychloride 2 gm tui litre 1 a pawlhin kah tur. </p>");
+					$("#thlaivenhim").append("<p style='text-align:justify;'>Anṭam hriak nei par vul tichhe rannung laka ven nan MALATHION ml 50 leh tui ṭin khata pawlhin phuh tur.  </p>");
+						  $("#thlaivenhim").append("<p style='text-align:justify;'><b> ENKAWL HNA: </b>Ser huan hlawhtling taka siam thei tur chuan Bawngek leiṭha leh Fertilizer te a hun tak leh a pek dan dik taka pek tur zat chiah pek hi a pawimawh em em a ni. </p>");
+					 $("#thlaivenhim").append("<p style='text-align:justify;'>A hun thuah chuan Bawngek Leiṭha kum khat chhunga pek tur zawng zawng chu December thla emaw, January thla tir lamah emaw pek zawh vek tur a ni. Ser tet leh len deuh dan azir te, a hrisel dan azir tein Bawngek Leiṭha pek dan a danglam thei a. Dan naranin a hnuaia ziak dan hian pek theih ni se a ṭha ber ang.  </p>");
+					$("#thlaivenhim").append("<p> <table><tr><th>Sl. No.</th><th><center>&nbsp;&nbsp;Ser kum zat	</center></th><th><center>&nbsp;&nbsp;Bawngek Leiṭha pek zat tur </center></th></tr><tr><td>1</td><td><center>Kum 1-3</center></td><td><center>Kgs. 10 vel </center></td></tr><tr><td>2</td><td><center>Kum 4-6</center></td><td><center>Kgs. 25 vel </center></td></tr><tr><td>3</td><td><center>Kum 7-9</center></td><td><center>Kgs. 60 vel </center></td></tr><tr><td>4</td><td><center>Kum 10 leh a chung lam</center></td><td><center>Kgs.100 vel </center></td></tr></table></p>");
+						$("#thlaivenhim").append("<p style='text-align:justify;'><b>BAWNGEK LEIṬHA PEK DAN TUR: </b>Bawngek Leiṭha hi ser ṭang zar hnuai chinah hian theh darh mai tur a ni a. Mahse, a kung aṭanga ft.1 leh inches 4 velah hi chuan thlai chaw hiptu awm miah loh avangin heng hi chuan Bawngek Leiṭha dah loh tur a ni.  </p>");
+					$("#thlaivenhim").append("<p style='text-align:justify;'><b>BORDEAUX MIXTURE (1%) SIAM DAN:</b> Copper Sulphate gm 500 puanchhia (rizai kawr chhia emaw)-ah thawl takin fun la, thingpuife chiah ang hian tuilum litre 25-ah a chim tawk chiahin chiah ang che. Copper Sulphate chiah nan ṭin balṭin leh thir lam reng reng hman tur a ni lo. Hlumbel emaw hman ni se.  </p>");
+					 $("#thlaivenhim").append("<p style='text-align:justify;'>Tui litre 25 teh chhuak la, bur khatah chinai pangngai gm 500 bur plastic bucket ah dah la, tui chu zawi tea leih lutin kuhvakhawra hnawih ang tur chiah hian chawk diak la, chuta tui la bang chu zawi te bawkin leih lut leh ang che. Tui leih luh lai hian tiangin chawk pah reng ang che. </p>");
+						 $("#thlaivenhim").append("<p style='text-align:justify;'>Chutiang chuan Copper Sulphate tui chu chinai tuia leih lutin chawhpawlh la, chawk pah reng ang che.  </p>");
+						  $("#thlaivenhim").append("<p style='text-align:justify;'> Alu leh Tomato te natna (a pûl hri) ven nan BORDEAUX MIXTURE-in, a khat tawka kah a ṭha. Ser kungah pawh Ser natna tam tak enkawl nan a hman tangkai theih hle. </p>");
+						  $("#sanghakhawi").append("<ol type='1'><li>Thla tina sawi angina BAWNGEK LEIṬHA leh  FERTILIZERS te pek leh tur. </li><li>Artificial Feeding a ṭul chuan October thlaa mi angin pek tur. </li><li>Hnim hring chan sawm Grass Carp pek tur.  </li></ol>");
+				}
+            });
+        });
+      </script>
+ 
+  </body>
+</html>

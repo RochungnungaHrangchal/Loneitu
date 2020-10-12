@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "800411350693",
+    "firebase_url": "https://loneituthian-6a9a7.firebaseio.com",
+    "project_id": "loneituthian-6a9a7",
+    "storage_bucket": "loneituthian-6a9a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800411350693:android:bfeb30a21c1f2f76",
+        "android_client_info": {
+          "package_name": "in.ibridge.aizawl.loneitu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "800411350693-i1sgpdvrpviam5mj0cmat0duv6qurevh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.ibridge.aizawl.loneitu",
+            "certificate_hash": "88d41c124262010cdb261859099c7ebf493d278c"
+          }
+        },
+        {
+          "client_id": "800411350693-r0qe7jdqfsa2ig3kon8h96l3lk6h8k2d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfDUVMZOR_Mfolvt6No86_vwkh-iN0HyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "800411350693-r0qe7jdqfsa2ig3kon8h96l3lk6h8k2d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

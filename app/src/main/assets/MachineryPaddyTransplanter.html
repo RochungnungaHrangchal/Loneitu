@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="datatables.min.css" />
+
+    <title>Dealers under Agriculture Department</title>
+  </head>
+  <body>
+
+      <div class="container-fluid" style="width:95%;">
+          <h4 style="text-align:center;"><b>Paddy Transplanter Dealers</b></h4>
+          <div class="form">
+              <div class="form-group-sm">
+                  <table id="myTable" class="table table-responsive">
+                      <thead>
+                          <tr>
+                                                            <th>Operational Area</th>
+                              <th>Paddy Transplanter Dealer Name</th>
+                              <th>Make/Model</th>
+                           
+                          </tr>
+                      </thead>
+                      <tbody>   
+                          <tr>
+                              <td>Aizawl</td>
+                              <td>
+                                Zonghak Agency, Treasury Square, 
+                                Aizawl, Mizoram
+                              </td>
+                              <td><li>Fortune Agro Impex, 2 rows, planting depth-6.5cm</li></td>
+                          </tr>                    
+                        <tr>
+                            <td>Kolkata</td>
+                            <td>
+                                Tilak Aakriti Services, 2, Garstin Place, Kolkata
+                            </td>
+                            <td><li>Magnificent ME 6 Row Pull & Push type</li>
+                                <li>Jining Quingke TAS 2 Row</li>
+                                <li>Magnificent ME 4 Row Pull & Push type</li></td>
+                        </tr>
+                
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="jquery-3.3.1.slim.min.js" ></script>
+      <script src="popper.min.js" ></script>
+      <script src="bootstrap.min.js" ></script>
+      <script src="datatables.min.js" type="text/javascript"></script>
+      <script>
+          $(document).ready(function () {
+              $('#myTable').dataTable();
+          });
+      </script>
+  </body>
+</html>

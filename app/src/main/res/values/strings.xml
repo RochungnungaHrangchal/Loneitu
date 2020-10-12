@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">Loneitu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Logout</string>
+
+
+
+    <string name="menu_cropcultivation">Thlai Chin Dan</string>
+    <string name="menu_cropprotection">Thil Tul Report-na</string>
+    <string name="menu_dealers">Dealers</string>
+    <string name="menu_rainfall">Ruahtui Tlak dan</string>
+    <string name="menu_areaproduction">Thlai Tharchhuah Zat</string>
+    <string name="menu_successstories">Hlawhtlinna Chanchin</string>
+    <string name="menu_news">News</string>
+    <string name="menu_cropcalendars">Crop Calendar</string>
+    <string name="menu_callofficial">Call Official</string>
+    <string name="menu_marketing">Marketing</string>
+
+    <string name="menu_logout">Logout</string>
+    <string-array name="question_category">
+        <item>Pesticides</item>
+        <item>Fertilizer </item>
+        <item>Thlai Ven Dan</item>
+    </string-array>
+
+    <string name="district">Select the District</string>
+    <string name="yearselect">Select the Year</string>
+    <string-array name="districtlist">
+
+        <item>Aizawl</item>
+        <item>Lunglei</item>
+        <item>Siaha</item>
+        <item>Champhai</item>
+        <item>Kolasib</item>
+        <item>Serchhip</item>
+        <item>Lawngtlai</item>
+        <item>Mamit</item>
+
+    </string-array>
+    <string-array name="dealerCategory">
+
+        <item>Select Dealer Category</item>
+        <item>Pesticides</item>
+        <item>Insecticides</item>
+        <item>Fertilizers</item>
+        <item>Seeds</item>
+        <item>Machinery Rotovator</item>
+        <item>Machinery Power Tillers</item>
+        <item>Machinery Paddy Weeders</item>
+        <item>Machinery Paddy Transplanter</item>
+        <item>Machinery Self-Propelled Paddy</item>
+        <item>Machinery Terrace Blade Leveller</item>
+        <item>Machinery Tractor</item>
+        <item>Machinery Trailer</item>
+        <item>Machinery Disc Plough</item>
+        <item>Machinery Knapsack Sprayer</item>
+        <item>Machinery Gur Boiling Plant</item>
+        <item>Machinery Offset Disc Horrow</item>
+        <item>Machinery Mini Power Tiller(below 8 HP)</item>
+        <item>Machinery Brush Cutter</item>
+        <item>Machinery Cultivator</item>
+    </string-array>
+    <string-array name="productionspinner">
+
+        <item>Select the Category</item>
+        <item>By Crop Name</item>
+        <item>By District Wise</item>
+        <item>State Consolidated</item>
+
+    </string-array>
+    <string-array name="rainfallMonth">
+
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="officialDirectory">
+
+        <item>Secretary</item>
+        <item>Additional Secretary</item>
+        <item>Under Secretary</item>
+        <item>Dy. Secretary</item>
+        <item>Director of Agriculture (Crop Husbandry)</item>
+        <item> Director of Agriculture (Research and Extension)</item>
+        <item> Joint Director (Technical)</item>
+        <item> Joint Director (Planning and Monitoring)</item>
+        <item> Dy Director (Research and Extension)</item>
+        <item> Dy Director (F and QS)</item>
+        <item> Dy Director (Planning and Monitoring)</item>
+        <item> Dy Director (Agro)</item>
+        <item> Dy Director (Oil Palm)</item>
+        <item> Dy Director (Plant Protection)</item>
+        <item> Dy Director (SS and Land Use Monitoring)</item>
+        <item>Dy Director (Admin)</item>
+        <item> Dy Director (Acct)</item>
+        <item> Dy Director (Extension)</item>
+        <item> Director (SAMETI)</item>
+        <item>Director (FOCUS)</item>
+        <item> DAO Aizawl</item>
+        <item> DAO Lunglei</item>
+        <item>DAO Siaha</item>
+        <item> DAO Champhai</item>
+        <item>DAO Kolasib</item>
+        <item>DAO Serchip</item>
+        <item>DAO Lawngtlai</item>
+        <item>DAO Mamit</item>
+
+
+    </string-array>
+    <string-array name="officialnos">
+
+        <item>3892322252</item>
+        <item>3892322071</item>
+        <item>3892336027</item>
+        <item>3892336661</item>
+        <item>389 2322437</item>
+        <item>389 2319025</item>
+        <item>389 2322534</item>
+        <item>389 2322534</item>
+        <item>389 2310286</item>
+        <item>389 2315493</item>
+        <item>389 2311159</item>
+        <item>389 2311160</item>
+        <item>389 2315190</item>
+        <item>389 2301384</item>
+        <item>389 2347046</item>
+        <item>389 2311163</item>
+        <item>389 2911156</item>
+        <item>389 2328564</item>
+        <item>389 33</item>
+        <item>389 2336838</item>
+        <item>389 2322206</item>
+        <item>372 2322267</item>
+        <item>3835 2322267</item>
+        <item>3831 234081</item>
+        <item>3837 220024</item>
+        <item>3838 222539</item>
+        <item>3835 232309</item>
+        <item>389 2565625</item>
+
+
+    </string-array>
+
+    <string name="title_activity_crop_calendars">CropCalendars</string>
+
+    <string name="title_activity_directory_new_style">Loneitu</string>
+</resources>

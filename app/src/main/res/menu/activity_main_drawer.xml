@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/nav_cropcultivation"
+            android:icon="@drawable/ic_closed_caption_black_24dp"
+            android:title="@string/menu_cropcultivation" />
+        <item
+            android:id="@+id/nav_cropprotection"
+            android:icon="@drawable/ic_linked_camera_black_24dp"
+            android:title="@string/menu_cropprotection" />
+        <item
+            android:id="@+id/nav_dealers"
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            android:title="@string/menu_dealers" />
+        <item
+            android:id="@+id/nav_rainfall"
+            android:icon="@drawable/ic_burst_mode_black_24dp"
+            android:title="@string/menu_rainfall" />
+        <item
+            android:id="@+id/nav_areaproduction"
+            android:icon="@drawable/ic_timeline_black_24dp"
+            android:title="@string/menu_areaproduction" />
+
+       <!-- <item
+            android:id="@+id/nav_cropcalendar"
+            android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
+            android:title="@string/menu_cropcalendars" />-->
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_news"
+                android:icon="@drawable/ic_file"
+                android:title="@string/menu_news" />
+            <item
+                android:id="@+id/nav_success_stories"
+                android:icon="@drawable/ic_format_indent_increase_black_24dp"
+                android:title="@string/menu_successstories" />
+            <item
+                android:id="@+id/nav_call_official"
+                android:icon="@drawable/ic_dialer_sip_black_24dp"
+                android:title="@string/menu_callofficial" />
+           <!-- <item
+                android:id="@+id/nav_marketing"
+                android:icon="@drawable/ic_attach_money_black_24dp"
+                android:title="@string/menu_marketing" />-->
+        </menu>
+    </item>
+
+
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_power_settings_new_black_24dp"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+
+</menu>
